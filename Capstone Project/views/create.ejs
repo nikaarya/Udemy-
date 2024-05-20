@@ -1,0 +1,28 @@
+<%- include ("partials/header.ejs") %>
+
+<% if (locals.createdPostTitle) { %>
+    <h1>
+        <%= createdPostTitle %>
+    </h1>
+
+<% } else { %>
+    <h1>Create post</h1>
+
+    <form class="createTextBoxes" method="POST" action="/submit">
+        <table>
+            <input id="titleText" class="createInput" type="text" placeholder="Title" name="title">
+            <br>
+            <input id="bodyText" class="postTextBox createInput" type="text" placeholder="Post" name="post">
+            <br>
+            <input type="submit" value="Save">
+        </table>
+    </form>
+
+<% } %>
+
+
+
+
+
+
+<%- include ("partials/footer.ejs") %>
